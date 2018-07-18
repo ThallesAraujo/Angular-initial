@@ -4,13 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 /* deixar espaço entre os imports dos itens do Angular e da aplicação*/
 import { AppComponent } from './app.component';
+import { NewComponent } from './newcomponent/new.component';
+import { LoremComponent } from './lorem/lorem.component';
 
 @NgModule({
   /*declarações de componentes (classes) de visualização do módulo.
   Caso houvesse mais de um módulo, eles também seriam
   declarados aqui*/
   declarations: [
-    AppComponent
+    AppComponent,
+    LoremComponent,
+    NewComponent
   ],
   /*importações de módulos do qual este módulo depende */
   imports: [
