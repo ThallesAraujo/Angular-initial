@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Thalles';
+
+  adicionar(){
+    return this.nome;
+  }
+
+  alterarNome(event: any){
+    this.nome = event.target.value;
+  }
+
 }
