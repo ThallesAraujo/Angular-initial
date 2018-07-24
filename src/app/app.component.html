@@ -1,7 +1,7 @@
   <!-- template html usado pelo componente, repassado para o index-->
   <!--Tipos de Data Binding:-->
   <div class="container">
-      <div class="alert alert-success" role="alert">
+      <div class="alert alert-success" role="alert" [hidden]="!adicionado">
         <!-- Interpolação com Template Expression: parecida com a forma empregada
         pelo Django Template. Converte, em runtime, as expressões de template
         em seus respectivos valores, sendo esta resultante em uma string, podendo-se
@@ -11,11 +11,18 @@
 
         <form>
           <label for="ip_nome">Nome:</label>
+          <!--Bindings: funcionam tal como no JavaFX. Ao utilizar o binding, a
+          segunda parte da declaração não recebe as chaves-->
+
           <!--Event Binding: associa um evento do template ao componente
           (o componente reage aos eventos do template. No caso a seguir, isso foi
-          feito com um método)-->
-          <input id="ip-nome" placeholder="Digite seu nome" value="{{nome}}" (input)="alterarNome($event)">
+          feito com um método) [parte removida] (input)="alterarNome($event)"-->
+
+          <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" #inputNome>
         </form>
-        <button class="btn btn-primary" onclick="document.getElementById('ip-nome').value = ''" >Limpar</button>
+
+        <!--Property Binding: associa propriedades do componente ao template-->
+
+        <button class="btn btn-primary" (click)="adicionar(inputNome.value)" [disabled]="nome.length == 0" >Adicionar</button>
 
   </div>

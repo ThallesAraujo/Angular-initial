@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nome = 'Thalles';
+  nome = '';
+  adicionado = false;
 
-  adicionar(){
-    return this.nome;
+  adicionar(nome : string){
+    this.nome = nome
+    this.adicionado = true;
   }
 
   alterarNome(event: any){
