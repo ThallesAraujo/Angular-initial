@@ -9,14 +9,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   nome = '';
   adicionado = false;
+  ultimoId = 0;
+  funcionarios = [];
 
   adicionar(nome : string){
-    this.nome = nome
+    this.nome = nome;
     this.adicionado = true;
-  }
-
-  alterarNome(event: any){
-    this.nome = event.target.value;
+    this.funcionarios.push({
+      nome: this.nome,
+      id: ++ this.ultimoId,
+    });
   }
 
 }
