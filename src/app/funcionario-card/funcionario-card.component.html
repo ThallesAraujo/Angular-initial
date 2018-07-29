@@ -3,6 +3,7 @@ usar estilos dinâmicos, conforme feito abaixo-->
 <div class="card" [ngStyle]="getEstiloCartao()">
   <img class="card-img-top" src="https://randomuser.me/api/portraits/{{funcionario.sexo}}/{{funcionario.id}}.jpg" alt="Card image cap">
   <div class="card-body">
-  <h5 class="card-title">{{funcionario.nome}}</h5>
+  <!--ngClass: funciona da mesma forma que o ngStyle, só que pra classes CSS-->
+  <h5 class="card-title"> <span class="badge" [ngClass]="{ 'badge-danger': isAdmin() }">{{funcionario.nome}}</span></h5>
   </div>
 </div>
