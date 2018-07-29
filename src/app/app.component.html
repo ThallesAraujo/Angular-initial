@@ -1,41 +1,11 @@
   <!-- template html usado pelo componente, repassado para o index-->
-  <!--Tipos de Data Binding:-->
   <div style="padding: 15px;">
-      <div class="alert alert-success" role="alert" [hidden]="!adicionado">
-        <!-- Interpolação com Template Expression: parecida com a forma empregada
-        pelo Django Template. Converte, em runtime, as expressões de template
-        em seus respectivos valores, sendo esta resultante em uma string, podendo-se
-        inclusive retornar, para exibição, cálculos ou propriedades complexas dos componentes-->
-          <strong>Adicionado:</strong> {{ nome }}
-        </div>
-
-        <form class="form-horizontal">
-
-          <div class="form-group">
-              <label for="ip_nome">Nome:</label>
-              <!--Bindings: funcionam tal como no JavaFX. Ao utilizar o binding, a
-              segunda parte da declaração não recebe as chaves-->
-    
-              <!--Event Binding: associa um evento do template ao componente
-              (o componente reage aos eventos do template. No caso a seguir, isso foi
-              feito com um método) [parte removida] (input)="alterarNome($event)"-->
-              
-              <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" #inputNome>
-            
-          </div>
-          <div class="form-group">
-            <label for="sl_genero">Gênero:</label>
-            <select id="sl_genero" #slSexo>
-              <option value="men">Masculino</option>
-              <option value="women">Feminino</option>
-            </select>
-          </div>
-          
-          <!--Property Binding: associa propriedades do componente ao template-->
-
-        <button class="btn btn-primary" (click)="adicionar(inputNome.value, slSexo.value)" [disabled]="nome.length == 0" >Adicionar</button>
-
-        </form>
+      
+        <!--Binding de eventos: usados para comunicação entre componentes-->
+        <!--O objeto de evento em si é, neste caso, do mesmo tipo que fora passado
+        no form de funcionário. Neste caso, ele só precisa ser recebido e adicionado no
+        app component-->
+        <app-funcionario-form (funcionarioAdicionado)= "onFuncionarioAdicionado($event)"></app-funcionario-form>
 
         <div style="padding: 15px; margin-top: 10px;">
           <h2>Adicionados:</h2>

@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms'
 /* deixar espaço entre os imports dos itens do Angular e da aplicação*/
 import { AppComponent } from './app.component';
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
+import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 
 @NgModule({
   /*declarações de componentes (classes) de visualização do módulo.
@@ -14,7 +15,8 @@ import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.co
   declarados aqui*/
   declarations: [
     AppComponent,
-    FuncionarioCardComponent
+    FuncionarioCardComponent,
+    FuncionarioFormComponent
   ],
   /*importações de módulos do qual este módulo depende */
   imports: [
