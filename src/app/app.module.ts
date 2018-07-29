@@ -6,8 +6,7 @@ import { FormsModule } from '@angular/forms'
 
 /* deixar espaço entre os imports dos itens do Angular e da aplicação*/
 import { AppComponent } from './app.component';
-import { NewComponent } from './newcomponent/new.component';
-import { LoremComponent } from './lorem/lorem.component';
+import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 
 @NgModule({
   /*declarações de componentes (classes) de visualização do módulo.
@@ -15,8 +14,7 @@ import { LoremComponent } from './lorem/lorem.component';
   declarados aqui*/
   declarations: [
     AppComponent,
-    LoremComponent,
-    NewComponent
+    FuncionarioCardComponent
   ],
   /*importações de módulos do qual este módulo depende */
   imports: [
