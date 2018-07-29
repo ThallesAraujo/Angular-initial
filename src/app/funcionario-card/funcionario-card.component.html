@@ -1,4 +1,6 @@
-<div class="card">
+<!--ngStyle: diretiva para modificação de estilo. É possível inclusive
+usar estilos dinâmicos, conforme feito abaixo-->
+<div class="card" [ngStyle]="getEstiloCartao()">
   <img class="card-img-top" src="https://randomuser.me/api/portraits/{{funcionario.sexo}}/{{funcionario.id}}.jpg" alt="Card image cap">
   <div class="card-body">
   <h5 class="card-title">{{funcionario.nome}}</h5>

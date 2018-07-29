@@ -19,4 +19,15 @@ export class FuncionarioCardComponent{
    */
   @Input('funcionarioOnComponent') funcionario: any;
 
+  /**
+   * Adição dinâmica de CSS
+   */
+  getEstiloCartao(){
+
+    return {
+      'background-color': this.funcionario.sexo == 'men'? '#5d9faf' : '#af5caa'
+    };
+
+  }
+
 }
