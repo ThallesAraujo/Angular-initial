@@ -17,9 +17,9 @@
       <!--Event Binding: associa um evento do template ao componente
       (o componente reage aos eventos do template. No caso a seguir, isso foi
       feito com um método) [parte removida] (input)="alterarNome($event)"-->
-      
+
       <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" #inputNome>
-    
+
   </div>
   <div class="form-group">
     <label for="sl_genero">Gênero:</label>
@@ -28,7 +28,7 @@
       <option value="women">Feminino</option>
     </select>
   </div>
-  
+
   <!--Property Binding: associa propriedades do componente ao template-->
 
 <button class="btn btn-primary" (click)="adicionar(inputNome.value, slSexo.value)" [disabled]="nome.length == 0" >Adicionar</button>

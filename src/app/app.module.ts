@@ -2,7 +2,7 @@
 /*define o componente principal da aplicação (neste caso, o AppComponent)*/
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
 
 /* deixar espaço entre os imports dos itens do Angular e da aplicação*/
 import { AppComponent } from './app.component';

@@ -18,7 +18,7 @@ export class FuncionarioFormComponent {
    */
   @Output() funcionarioAdicionado = new EventEmitter();
 
-  adicionar(nome : string, sexo: string){
+  adicionar(nome: string, sexo: string) {
     this.nome = nome;
     this.adicionado = true;
     this.sexo = sexo;
@@ -37,6 +37,6 @@ export class FuncionarioFormComponent {
      */
     this.funcionarioAdicionado.emit(funcionario);
 
-  }  
+  }
 
 }
