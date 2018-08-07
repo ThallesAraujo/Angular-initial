@@ -18,7 +18,10 @@
       (o componente reage aos eventos do template. No caso a seguir, isso foi
       feito com um método) [parte removida] (input)="alterarNome($event)"-->
 
-      <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" appCampoColorido #inputNome>
+      <!--Nesse caso, quando necessita-se passar e atribuir o valor da diretiva, o valor default não irá funcionar.
+      Torna-se mandatório se atribuir um valor-->
+
+      <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" [appCampoColorido]="'yellow'" #inputNome>
 
   </div>
   <div class="form-group">
