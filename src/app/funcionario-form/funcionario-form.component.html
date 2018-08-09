@@ -20,8 +20,11 @@
 
       <!--Nesse caso, quando necessita-se passar e atribuir o valor da diretiva, o valor default não irá funcionar.
       Torna-se mandatório se atribuir um valor-->
+      <!--#field: um atributo da diretiva host, que no caso é a diretiva filha coloredField, é exposto a todo o documento HTML,
+      sendo seus subatributos acessíveis em todo ele-->
 
-      <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" [appCampoColorido]="'yellow'" #inputNome>
+      <input id="ip-nome" placeholder="Digite seu nome" [(ngModel)]="nome" name="ip-nome" (focus)="adicionado = false" [appCampoColorido]="'yellow'" #inputNome
+      #field="coloredField">
 
   </div>
   <div class="form-group">
@@ -35,5 +38,7 @@
   <!--Property Binding: associa propriedades do componente ao template-->
 
 <button class="btn btn-primary" (click)="adicionar(inputNome.value, slSexo.value)" [disabled]="nome.length == 0" >Adicionar</button>
+<button class="btn btn-info" (click)="field.onFocus()" >Colorir</button>
+<button class="btn btn-info" (click)="field.onBlur()" >Descolorir</button>
 
 </form>

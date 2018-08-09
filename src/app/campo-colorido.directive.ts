@@ -1,7 +1,8 @@
 import { Directive, HostListener, HostBinding, Input } from '@angular/core';
 
 @Directive({
-  selector: '[appCampoColorido]'
+  selector: '[appCampoColorido]',
+  exportAs: 'coloredField'
 })
 export class CampoColoridoDirective {
 

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.component';
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
+import { FormulariosComponent } from './formularios/formularios.component';
 
 @NgModule({
   /*declarações de componentes (classes) de visualização do módulo.
@@ -18,7 +19,8 @@ import { CampoColoridoDirective } from './campo-colorido.directive';
     AppComponent,
     FuncionarioCardComponent,
     FuncionarioFormComponent,
-    CampoColoridoDirective
+    CampoColoridoDirective,
+    FormulariosComponent
   ],
   /*importações de módulos do qual este módulo depende */
   imports: [
