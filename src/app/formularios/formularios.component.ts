@@ -12,7 +12,7 @@ export class FormulariosComponent{
     console.log(form);
     /*Por exemplo: caso se quisesse pegar o nome:
     form.value.nome
-    modelo-> form.value.nome_da_propriedade_no_template*/
+    modelo-> form.value.nome_da_propriedade_no_template.*/
   }
 
 }
