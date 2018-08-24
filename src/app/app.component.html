@@ -1,3 +1,14 @@
 <div class="container">
+  <app-menu></app-menu>
+  <br>
+  <!--
+    O BotõesModule não foi importado por AppModule.
+    Como ele foi reexportado pelo módulo de navegação (importado por
+    AppModule), isso possibilita que ele use mesmo sem importar
+  -->
   <app-botao-grande label="Teste"></app-botao-grande>
+  <!--
+    Um módulo pode sempre, caso faça sentido, reexportar qualquer módulo
+    que ele importe
+  -->
 </div>

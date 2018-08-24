@@ -10,7 +10,7 @@ import { FuncionarioCardComponent } from './funcionario-card/funcionario-card.co
 import { FuncionarioFormComponent } from './funcionario-form/funcionario-form.component';
 import { CampoColoridoDirective } from './campo-colorido.directive';
 import { FormulariosComponent } from './formularios/formularios.component';
-import { BotoesModule } from './botoes/botoes.module';
+import { NavegacaoModule } from './navegacao/navegacao.module';
 
 @NgModule({
   /*declarações de componentes (classes) de visualização do módulo.
@@ -27,7 +27,7 @@ import { BotoesModule } from './botoes/botoes.module';
   imports: [
     BrowserModule,
     FormsModule,
-    BotoesModule
+    NavegacaoModule
   ],
   providers: [],
   /*Declara qual o módulo principal da aplicação*/
